@@ -38,10 +38,10 @@ begin
   _task:=TTask.Create(
     procedure
     var
-      i: byte;
+      i: word;
     begin
       _counter:=0;
-      for i:=0 to 255 do
+      for i:=0 to 5000 - 1 do
       begin
         if TTask.CurrentTask.Status = TTaskStatus.Canceled then
         begin
@@ -49,7 +49,7 @@ begin
           btnStop.Enabled:=false;
           Exit;
         end;
-        Sleep(10);
+        Sleep(2);
 
         if TTask.CurrentTask.Status = TTaskStatus.Running then
         begin
@@ -79,6 +79,7 @@ begin
   begin
     frmModal:=TfrmModal.Create(nil);
     frmModal.taskMain:=_task;
+    frmModal.counter:=_counter;
     frmModal.ShowModal;
     FreeAndNil(frmModal);
   end;

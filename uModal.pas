@@ -10,8 +10,8 @@ uses
 type
   TfrmModal = class(TForm)
     btnCancel: TButton;
-    Panel1: TPanel;
     imgWait: TImage;
+    Label1: TLabel;
     procedure btnCancelClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
@@ -19,6 +19,7 @@ type
   public
     { Public declarations }
     taskMain: ITask;
+    counter: word;
   end;
 
 var
