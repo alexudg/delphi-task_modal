@@ -1,3 +1,12 @@
+{*******************************
+* author: Alejandro Ramirez Macias alexudg@gmail.com
+* facebook: www.facebook.com/PlanetSistemas
+* location: Guadalajara, Jalisco, Mexico
+* date: july 2024
+* ide: Delphi Seattle 10
+********************************}
+
+
 unit uMain;
 
 interface
